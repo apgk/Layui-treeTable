@@ -33,7 +33,7 @@ layui.define(['jquery','layer'], function (exports) {
             thead = checkbox && '<th style="width:28px;">' + (o.inArray(e.top_value, e.checked.data) > -1 ? checked : checkbox) + '</th>';
         o.each(e.cols, function (i, obj) {
             var style = '';
-            obj.width && (style += 'width:' + obj.width + 'px;'), obj.align && (style += 'text-align:' + obj.align + ';'), obj.minWidth && (style += 'min-width:' + obj.minWidth + 'px;'), style && (style += 'style="' + style + '"');
+            obj.width && (style += 'width:' + obj.width + 'px;'), obj.align && (style += 'text-align:' + obj.align + ';'), obj.minWidth && (style += 'min-width:' + obj.minWidth + 'px;'), style && (style = 'style="' + style + '"');
            thead += '<th ' + style + '>' + obj.title + '</th>';
         });
         tbody += this.template_tr(e, is_table, checked, checkbox, t.data(e, e.data));
